@@ -1,5 +1,7 @@
 # RPCS3 Config Generator
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 Automatically generate RPCS3 per-game configuration files from wiki settings. Scans your installed games, builds a database from saved RPCS3 wiki pages, and produces `config_SERIAL.yml` files with correct resolution scaling — no manual tinkering.
 
 ## How it works
@@ -37,7 +39,9 @@ your-folder/
 └── Installed_within_rpcs3  ← your game list
 ```
 
-Double-click the AppImage — it auto-detects the files and shows an interactive menu.
+**Both `wiki_pages/` and `Installed_within_rpcs3` must be in the same directory as the AppImage.** The tool auto-detects them from the AppImage's location.
+
+Double-click the AppImage — it shows an interactive menu.
 
 ### Run from source
 
@@ -93,3 +97,4 @@ pip install pyinstaller
 pyinstaller --onefile --name rpcs3-config-generator rpcs3-config-gui.py
 # Then wrap with appimagetool
 ```
+<img width="818" height="620" alt="Screenshot from 2026-06-18 12-45-23" src="https://github.com/user-attachments/assets/405798f9-4626-4f08-aafe-51d34f06bb94" />
